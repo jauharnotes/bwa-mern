@@ -50,3 +50,10 @@
 // Utilities
 @import "utilities/api";
 // scss-docs-end import-stack
+
+.brand-text-icon {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: $primary;
+}

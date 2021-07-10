@@ -55,25 +55,38 @@
   font-size: 20px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
-  color: $primary;
+  color: $indigo;
+  text-decoration: none;
+  &:hover {
+    color: $indigo;
+  }
 }
 
-.header {
-  border-radius: 1px solid $gray-200;
+.text-blue {
+  color: #152c5b;
+}
+
+header {
+  border-bottom: 1px solid $gray-200;
   width: 100%;
   position: relative;
 
   .navbar {
     height: 80px;
 
-    .navbar-nav {
+    ul.navbar-nav {
       li.nav-item {
+        &.active {
+          a.nav-link {
+            color: $indigo;
+          }
+        }
         a {
           &.nav-link {
             color: $gray-900;
             padding-left: 1rem;
             padding-right: 1rem;
-            &hover {
+            &.nav-link:hover {
               text-decoration: underline;
             }
           }

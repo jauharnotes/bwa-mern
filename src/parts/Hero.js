@@ -15,8 +15,8 @@ export default function Hero(props) {
   }
 
   return (
-    <section className="container pt-4">
-      <div className="row align-items-center justify-content-between">
+    <section className="container" style={{ paddingTop: 69 }}>
+      <div className="row d-flex align-items-center justify-content-between">
         <div className="col-auto pr-5" style={{ width: 480 }}>
           <h1 className="text-blue fw-bold line-height-1 mb-3">
             Forget Busy Work, <br />
@@ -74,33 +74,28 @@ export default function Hero(props) {
             </div>
           </div>
         </div>
-
-        <div className="col-6 margin-left-20">
-          <div>
-            <img
-              src={ImageHero}
-              alt="Room with couches"
-              className="img-fluid position-absolute"
-              style={{
-                marginTop: -190,
-                width: 520,
-                height: 410,
-                margin: "-30px 0 0 -30px",
-                zIndex: 1,
-              }}
-            />
-            <img
-              src={ImageHero_}
-              alt="Room with couches frame"
-              className="img-fluid position-absolute"
-              style={{
-                marginTop: -160,
-                width: 520,
-                height: 410,
-                margin: "-0 -15px -15px 0",
-              }}
-            />
-          </div>
+        <div className="col" style={{ paddingLeft: 159 }}>
+          <img
+            src={ImageHero}
+            alt="Room with couches"
+            className="img-fluid position-absolute"
+            style={{
+              width: 520,
+              height: 410,
+              margin: "-30px 0 0 -30px",
+              zIndex: 1,
+            }}
+          />
+          <img
+            src={ImageHero_}
+            alt="Room with couches frame"
+            className="img-fluid position-relative"
+            style={{
+              width: 520,
+              height: 410,
+              margin: "-0 -15px -15px 0",
+            }}
+          />
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import IconCities from "assets/images/icons/ic_cities.svg";
 import IconTraveler from "assets/images/icons/ic_traveler.svg";
 import IconTreasure from "assets/images/icons/ic_treasure.svg";
 import Button from "elements/Button";
+import NumberFormat from "utils/NumberFormat";
 
 export default function Hero(props) {
   function showMostPicked() {
@@ -44,7 +45,7 @@ export default function Hero(props) {
                 alt={`${props.data.travelers} Travelers`}
               />
               <h6 className="mt-3 text-blue">
-                {props.data.travelers}{" "}
+                {NumberFormat(props.data.travelers)}{" "}
                 <span className="text-secondary fw-light">travelers</span>
               </h6>
             </div>
@@ -56,7 +57,7 @@ export default function Hero(props) {
                 alt={`${props.data.treasures} Treasures`}
               />
               <h6 className="mt-3 text-blue">
-                {props.data.treasures}{" "}
+                {NumberFormat(props.data.treasures)}{" "}
                 <span className="text-secondary fw-light">treasures</span>
               </h6>
             </div>
@@ -68,7 +69,7 @@ export default function Hero(props) {
                 alt={`${props.data.cities} Cities`}
               />
               <h6 className="mt-3 text-blue">
-                {props.data.cities}{" "}
+                {NumberFormat(props.data.cities)}{" "}
                 <span className="text-secondary fw-light">cities</span>
               </h6>
             </div>

@@ -3,12 +3,19 @@ import Button from "elements/Button";
 
 export default function MostPicked(props) {
   return (
-    <section className="container">
+    <section
+      ref={props.refMostPicked}
+      className="container"
+      style={{ height: 2000 }}
+    >
       <h4 className="mb-3">Most Picked</h4>
       <div className="container-grid">
         {props.data.map((item, index) => {
           return (
-            <div className={`item column-4 ${index === 0 ? "row-2" : "row-1"}`}>
+            <div
+              key={`mostpicked-${index}`}
+              className={`item column-4 ${index === 0 ? "row-2" : "row-1"}`}
+            >
               <div className="card card-featured">
                 <div className="tag">
                   ${item.price}
@@ -27,8 +34,11 @@ export default function MostPicked(props) {
                     className="streched-link d-block text-white"
                     href={`/properties/${item.id}`}
                   >
-                    <h5>{item.name}</h5>
+                    <h5>{item.title}</h5>
                   </Button>
+                  <span>
+                    {item.city}, {item.country}
+                  </span>
                 </div>
               </div>
             </div>
